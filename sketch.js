@@ -337,7 +337,7 @@ function draw() {
    }
 
 
-  console.log(mouse.x)
+  console.log(Mouse.x)
   mazerunner.collide(wall1)
   mazerunner.collide(wall2)
   mazerunner.collide(wall3)
@@ -612,8 +612,8 @@ count=frameCount
 
 function mouseReleased(){
 
-mouse.x=0
-mouse.y=0
+Mouse.x=0
+Mouse.y=0
 
 
 
