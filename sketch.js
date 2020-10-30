@@ -224,6 +224,9 @@ function draw() {
   background(maze)
   
 
+
+
+
    up.mouseOver(()=>{
 
     mazerunner.velocityX=0;
@@ -602,5 +605,15 @@ function counting(){
 if(state===1){
 count=frameCount
 }
+
+}
+
+
+function mouseReleased(){
+
+mouse.x=0
+mouse.y=0
+
+
 
 }
