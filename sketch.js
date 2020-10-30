@@ -228,7 +228,7 @@ function draw() {
 
 
 
-   up.mouseOver(()=>{
+   up.mousePressed(()=>{
 
     mazerunner.velocityX=0;
     mazerunner.velocityY=-speed;
@@ -246,7 +246,7 @@ function draw() {
 
 
 
-  down.mouseOver(()=>{
+  down.mousePressed(()=>{
 
     mazerunner.velocityX=0;
     mazerunner.velocityY=speed;
@@ -264,7 +264,7 @@ function draw() {
 
   
 
-  right.mouseOver(()=>{
+  right.mousePressed(()=>{
 
     mazerunner.velocityX=speed;
     mazerunner.velocityY=0;
@@ -280,7 +280,7 @@ function draw() {
 
   })
 
-  left.mouseOver(()=>{
+  left.mousePressed(()=>{
 
     mazerunner.velocityX=-speed;
     mazerunner.velocityY=0;
