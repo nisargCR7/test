@@ -152,7 +152,7 @@ function setup() {
   virus4.scale=Height/2500
   //virus4.velocityX=5
 
-  mazerunner = createSprite(00,00,100,100)
+  mazerunner = createSprite(30,30,100,100)
   mazerunner.addImage("left",left_stand)
   mazerunner.addImage("right",right_stand)
   mazerunner.addImage("up",up_stand)
