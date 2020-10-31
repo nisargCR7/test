@@ -1,11 +1,10 @@
-
 var Width=window.innerWidth
 var Height=window.innerHeight
 var speed=Height/150
 var life=1
 var x1,y1
 var x2=Width/11,y2=Height/26
-var state=1
+var state=1,mstate=0
 var count
 function  preload() {
   maze=loadImage('images/maze.jpg')
@@ -233,16 +232,10 @@ function draw() {
     mazerunner.velocityX=0;
     mazerunner.velocityY=-speed;
     mazerunner.changeAnimation("u",up)
-
+    mstate="up"
   })
 
-  up.mouseOut(()=>{
-
-    mazerunner.velocityX=0;
-    mazerunner.velocityY=0;
-    mazerunner.changeAnimation("up",up_stand)
-
-  })
+ 
 
 
 
@@ -251,16 +244,10 @@ function draw() {
     mazerunner.velocityX=0;
     mazerunner.velocityY=speed;
     mazerunner.changeAnimation("d",down)
-
+    mstate="down"
   })
 
-  down.mouseOut(()=>{
-
-    mazerunner.velocityX=0;
-    mazerunner.velocityY=0;
-    mazerunner.changeAnimation("down",down_stand)
-
-  })
+  
 
   
 
@@ -269,32 +256,20 @@ function draw() {
     mazerunner.velocityX=speed;
     mazerunner.velocityY=0;
     mazerunner.changeAnimation("r",right)
-
+    mstate="right"
   })
 
-  right.mouseOut(()=>{
-
-    mazerunner.velocityX=0;
-    mazerunner.velocityY=0;
-    mazerunner.changeAnimation("right",right_stand)
-
-  })
+  
 
   left.mousePressed(()=>{
 
     mazerunner.velocityX=-speed;
     mazerunner.velocityY=0;
     mazerunner.changeAnimation("l",left)
-
+    mstate="left"
   })
 
-  left.mouseOut(()=>{
-
-    mazerunner.velocityX=0;
-    mazerunner.velocityY=0;
-    mazerunner.changeAnimation("left",left_stand)
-
-  })
+  
   if (keyIsDown(UP_ARROW)) {
   
     mazerunner.velocityX=0;
@@ -337,56 +312,56 @@ function draw() {
    }
 
 
-  console.log(Mouse.x)
-  mazerunner.collide(wall1)
-  mazerunner.collide(wall2)
-  mazerunner.collide(wall3)
-  mazerunner.collide(wall4)
-  mazerunner.collide(wall5)
-  mazerunner.collide(wall6)
-  mazerunner.collide(wall7)
-  mazerunner.collide(wall8)
-  mazerunner.collide(wall9)
-  mazerunner.collide(wall10)
-  mazerunner.collide(wall11)
-  mazerunner.collide(wall12)
-  mazerunner.collide(wall13)
-  mazerunner.collide(wall14)
-  mazerunner.collide(wall15)
-  mazerunner.collide(wall16)
-  mazerunner.collide(wall17)
-  mazerunner.collide(wall18)
-  mazerunner.collide(wall19)
-  mazerunner.collide(wall10)
-  mazerunner.collide(wall20)
-  mazerunner.collide(wall21)
-  mazerunner.collide(wall22)
-  mazerunner.collide(wall23)
-  mazerunner.collide(wall24)
-  mazerunner.collide(wall25)
-  mazerunner.collide(wall26)
-  mazerunner.collide(wall27)
-  mazerunner.collide(wall28)
-  mazerunner.collide(wall29)
-  mazerunner.collide(wall30)
-  mazerunner.collide(wall31)
-  mazerunner.collide(wall32)
-  mazerunner.collide(wall33)
-  mazerunner.collide(wall34)
-  mazerunner.collide(wall35)
-  mazerunner.collide(wall36)
-  mazerunner.collide(wall37)
-  mazerunner.collide(wall38)
-  mazerunner.collide(wall39)
-  mazerunner.collide(wall40)
-  mazerunner.collide(wall41)
-  mazerunner.collide(wall42)
-  mazerunner.collide(wall43)
-  mazerunner.collide(wall44)
-  mazerunner.collide(wall45)
-  mazerunner.collide(wall46)
-  mazerunner.collide(wall47)
-  mazerunner.collide(wall48)
+  console.log(life)
+  // mazerunner.collide(wall1)
+  // mazerunner.collide(wall2)
+  // mazerunner.collide(wall3)
+  // mazerunner.collide(wall4)
+  // mazerunner.collide(wall5)
+  // mazerunner.collide(wall6)
+  // mazerunner.collide(wall7)
+  // mazerunner.collide(wall8)
+  // mazerunner.collide(wall9)
+  // mazerunner.collide(wall10)
+  // mazerunner.collide(wall11)
+  // mazerunner.collide(wall12)
+  // mazerunner.collide(wall13)
+  // mazerunner.collide(wall14)
+  // mazerunner.collide(wall15)
+  // mazerunner.collide(wall16)
+  // mazerunner.collide(wall17)
+  // mazerunner.collide(wall18)
+  // mazerunner.collide(wall19)
+  // mazerunner.collide(wall10)
+  // mazerunner.collide(wall20)
+  // mazerunner.collide(wall21)
+  // mazerunner.collide(wall22)
+  // mazerunner.collide(wall23)
+  // mazerunner.collide(wall24)
+  // mazerunner.collide(wall25)
+  // mazerunner.collide(wall26)
+  // mazerunner.collide(wall27)
+  // mazerunner.collide(wall28)
+  // mazerunner.collide(wall29)
+  // mazerunner.collide(wall30)
+  // mazerunner.collide(wall31)
+  // mazerunner.collide(wall32)
+  // mazerunner.collide(wall33)
+  // mazerunner.collide(wall34)
+  // mazerunner.collide(wall35)
+  // mazerunner.collide(wall36)
+  // mazerunner.collide(wall37)
+  // mazerunner.collide(wall38)
+  // mazerunner.collide(wall39)
+  // mazerunner.collide(wall40)
+  // mazerunner.collide(wall41)
+  // mazerunner.collide(wall42)
+  // mazerunner.collide(wall43)
+  // mazerunner.collide(wall44)
+  // mazerunner.collide(wall45)
+  // mazerunner.collide(wall46)
+  // mazerunner.collide(wall47)
+  // mazerunner.collide(wall48)
   
 
   wall1.visible=false
@@ -612,8 +587,36 @@ count=frameCount
 
 function mouseReleased(){
 
-Mouse.x=0
-Mouse.y=0
+if(mstate==="right"){
+  mazerunner.velocityX=0
+  mazerunner.velocityY=0
+  mazerunner.changeAnimation("right",right_stand)
+  mstate=0
+}
+
+
+if(mstate==="left"){
+  mazerunner.velocityX=0
+  mazerunner.velocityY=0
+  mazerunner.changeAnimation("left",left_stand)
+  mstate=0
+}
+
+
+if(mstate==="up"){
+ mazerunner.velocityX=0
+ mazerunner.velocityY=0
+ mazerunner.changeAnimation("up",up_stand)
+ mstate=0
+}
+
+
+if(mstate==="down"){
+ mazerunner.velocityX=0
+ mazerunner.velocityY=0
+ mazerunner.changeAnimation("down",down_stand)
+ mstate=0
+}    
 
 
 
