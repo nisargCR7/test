@@ -227,7 +227,7 @@ function draw() {
 
 
 
-   up.mousePressed(()=>{
+   up.mouseOver(()=>{
 
     mazerunner.velocityX=0;
     mazerunner.velocityY=-speed;
@@ -239,7 +239,7 @@ function draw() {
 
 
 
-  down.mousePressed(()=>{
+  down.mouseOver(()=>{
 
     mazerunner.velocityX=0;
     mazerunner.velocityY=speed;
@@ -251,7 +251,7 @@ function draw() {
 
   
 
-  right.mousePressed(()=>{
+  right.mouseOver(()=>{
 
     mazerunner.velocityX=speed;
     mazerunner.velocityY=0;
@@ -261,7 +261,7 @@ function draw() {
 
   
 
-  left.mousePressed(()=>{
+  left.mouseOver(()=>{
 
     mazerunner.velocityX=-speed;
     mazerunner.velocityY=0;
@@ -585,39 +585,39 @@ count=frameCount
 }
 
 
-// function mouseReleased(){
+function mouseReleased(){
 
-// if(mstate==="right"){
-//   mazerunner.velocityX=0
-//   mazerunner.velocityY=0
-//   mazerunner.changeAnimation("right",right_stand)
-//   mstate=0
-// }
-
-
-// if(mstate==="left"){
-//   mazerunner.velocityX=0
-//   mazerunner.velocityY=0
-//   mazerunner.changeAnimation("left",left_stand)
-//   mstate=0
-// }
+if(mstate==="right"){
+  mazerunner.velocityX=0
+  mazerunner.velocityY=0
+  mazerunner.changeAnimation("right",right_stand)
+  mstate=0
+}
 
 
-// if(mstate==="up"){
-//  mazerunner.velocityX=0
-//  mazerunner.velocityY=0
-//  mazerunner.changeAnimation("up",up_stand)
-//  mstate=0
-// }
+if(mstate==="left"){
+  mazerunner.velocityX=0
+  mazerunner.velocityY=0
+  mazerunner.changeAnimation("left",left_stand)
+  mstate=0
+}
 
 
-// if(mstate==="down"){
-//  mazerunner.velocityX=0
-//  mazerunner.velocityY=0
-//  mazerunner.changeAnimation("down",down_stand)
-//  mstate=0
-// }    
+if(mstate==="up"){
+ mazerunner.velocityX=0
+ mazerunner.velocityY=0
+ mazerunner.changeAnimation("up",up_stand)
+ mstate=0
+}
+
+
+if(mstate==="down"){
+ mazerunner.velocityX=0
+ mazerunner.velocityY=0
+ mazerunner.changeAnimation("down",down_stand)
+ mstate=0
+}    
 
 
 
-// }
+}
