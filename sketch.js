@@ -605,7 +605,7 @@ count=frameCount
 }
 
 
-function mouseReleased(){
+function mouseClicked(){
 
 if(mstate==="right"){
   mazerunner.velocityX=0
