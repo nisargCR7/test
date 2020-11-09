@@ -5,6 +5,7 @@ var life=1
 var x1,y1
 var x2=Width/11,y2=Height/26
 var state=1,mstate=0
+var mstate2=0
 var count
 function  preload() {
   maze=loadImage('images/maze.jpg')
@@ -227,11 +228,9 @@ function draw() {
 
 
 
-   up.mouseOver(()=>{
+   up.mousePressed(()=>{
 
-    mazerunner.velocityX=0;
-    mazerunner.velocityY=-speed;
-    mazerunner.changeAnimation("u",up)
+    mstate2="up"
     mstate="up"
   })
 
@@ -239,11 +238,9 @@ function draw() {
 
 
 
-  down.mouseOver(()=>{
+  down.mousePressed(()=>{
 
-    mazerunner.velocityX=0;
-    mazerunner.velocityY=speed;
-    mazerunner.changeAnimation("d",down)
+    mstate2="down"
     mstate="down"
   })
 
@@ -251,22 +248,16 @@ function draw() {
 
   
 
-  right.mouseOver(()=>{
-
-    mazerunner.velocityX=speed;
-    mazerunner.velocityY=0;
-    mazerunner.changeAnimation("r",right)
+  right.mousePressed(()=>{
     mstate="right"
+    mstate2="right"
   })
 
   
 
-  left.mouseOver(()=>{
-
-    mazerunner.velocityX=-speed;
-    mazerunner.velocityY=0;
-    mazerunner.changeAnimation("l",left)
+  left.mousePressed(()=>{
     mstate="left"
+    mstate2="left"
   })
 
   
@@ -299,7 +290,34 @@ function draw() {
     mazerunner.changeAnimation("r",right)
   }
     
+  if (mstate2==="up") {
   
+    mazerunner.velocityX=0;
+    mazerunner.velocityY=-speed;
+    mazerunner.changeAnimation("u",up)
+  }
+    
+  
+   if(mstate2==="down") {
+      
+    mazerunner.velocityX=0;
+    mazerunner.velocityY=speed;
+    mazerunner.changeAnimation("d",down)
+  }
+
+  if(mstate2==="left") {
+      
+    mazerunner.velocityX=-speed;
+    mazerunner.velocityY=0;
+    mazerunner.changeAnimation("l",left)
+  }
+
+  if(mstate2==="right") {
+      
+    mazerunner.velocityX=speed;
+    mazerunner.velocityY=0;
+    mazerunner.changeAnimation("r",right)
+  }
   if(virus1.isTouching(wall32)){
 
    virus1.velocityY=-5
@@ -592,6 +610,7 @@ if(mstate==="right"){
   mazerunner.velocityY=0
   mazerunner.changeAnimation("right",right_stand)
   mstate=0
+  mstate2=0 
 }
 
 
@@ -600,6 +619,7 @@ if(mstate==="left"){
   mazerunner.velocityY=0
   mazerunner.changeAnimation("left",left_stand)
   mstate=0
+  mstate2=0 
 }
 
 
@@ -608,6 +628,7 @@ if(mstate==="up"){
  mazerunner.velocityY=0
  mazerunner.changeAnimation("up",up_stand)
  mstate=0
+ mstate2=0 
 }
 
 
@@ -616,6 +637,7 @@ if(mstate==="down"){
  mazerunner.velocityY=0
  mazerunner.changeAnimation("down",down_stand)
  mstate=0
+ mstate2=0 
 }    
 
 
