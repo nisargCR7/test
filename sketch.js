@@ -227,7 +227,18 @@ function draw() {
   oncontextmenu="return false">
 
 
-
+if (mouseIsPressed) {
+  if (mstate2==="up") {
+  
+    mazerunner.velocityX=0;
+    mazerunner.velocityY=-speed;
+    mazerunner.changeAnimation("u",up)
+  }
+   
+  } else {
+    
+  }
+  
    up.mousePressed(()=>{
     console.log("up")
     mstate2="up"
