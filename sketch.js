@@ -227,7 +227,7 @@ function draw() {
   oncontextmenu="return false">
 
 
-if (mouseIsPressed) {
+
   if (mstate2==="up") {
   
     mazerunner.velocityX=0;
@@ -235,7 +235,7 @@ if (mouseIsPressed) {
     mazerunner.changeAnimation("u",up)
   }
    
-  } 
+   
   
    up.mousePressed(()=>{
     console.log("up")
@@ -302,12 +302,12 @@ if (mouseIsPressed) {
   }
     
   if (mstate2==="up") {
-  
+  if (mouseIsPressed) {
     mazerunner.velocityX=0;
     mazerunner.velocityY=-speed;
     mazerunner.changeAnimation("u",up)
   }
-    
+  }  
   
    if(mstate2==="down") {
       
