@@ -295,7 +295,7 @@ function draw() {
   if (mstate2==="up") {
   
     mazerunner.velocityX=0;
-    mazerunner.velocityY=-speed;
+    mazerunner.velocityY=-5;
     mazerunner.changeAnimation("u",up)
   }
     
