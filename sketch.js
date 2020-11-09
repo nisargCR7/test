@@ -235,9 +235,7 @@ if (mouseIsPressed) {
     mazerunner.changeAnimation("u",up)
   }
    
-  } else {
-    
-  }
+  } 
   
    up.mousePressed(()=>{
     console.log("up")
