@@ -614,43 +614,43 @@ count=frameCount
 }
 
 
-function mouseClicked(){
+// function mouseClicked(){
 
-if(mstate==="right"){
-  mazerunner.velocityX=0
-  mazerunner.velocityY=0
-  mazerunner.changeAnimation("right",right_stand)
-  mstate=0
-  mstate2=0 
-}
-
-
-if(mstate==="left"){
-  mazerunner.velocityX=0
-  mazerunner.velocityY=0
-  mazerunner.changeAnimation("left",left_stand)
-  mstate=0
-  mstate2=0 
-}
+// if(mstate==="right"){
+//   mazerunner.velocityX=0
+//   mazerunner.velocityY=0
+//   mazerunner.changeAnimation("right",right_stand)
+//   mstate=0
+//   mstate2=0 
+// }
 
 
-if(mstate==="up"){
- mazerunner.velocityX=0
- mazerunner.velocityY=0
- mazerunner.changeAnimation("up",up_stand)
- mstate=0
- mstate2=0 
-}
+// if(mstate==="left"){
+//   mazerunner.velocityX=0
+//   mazerunner.velocityY=0
+//   mazerunner.changeAnimation("left",left_stand)
+//   mstate=0
+//   mstate2=0 
+// }
 
 
-if(mstate==="down"){
- mazerunner.velocityX=0
- mazerunner.velocityY=0
- mazerunner.changeAnimation("down",down_stand)
- mstate=0
- mstate2=0 
-}    
+// if(mstate==="up"){
+//  mazerunner.velocityX=0
+//  mazerunner.velocityY=0
+//  mazerunner.changeAnimation("up",up_stand)
+//  mstate=0
+//  mstate2=0 
+// }
+
+
+// if(mstate==="down"){
+//  mazerunner.velocityX=0
+//  mazerunner.velocityY=0
+//  mazerunner.changeAnimation("down",down_stand)
+//  mstate=0
+//  mstate2=0 
+// }    
 
 
 
-}
+// }
