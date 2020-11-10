@@ -228,13 +228,7 @@ function draw() {
 
 
 
-  if(mstate2==="up") {
   
-    mazerunner.velocityX=0;
-    mazerunner.velocityY=-speed;
-    mazerunner.changeAnimation("u",up)
-  }
-   
    
   
    up.mouseClicked(()=>{
@@ -322,7 +316,14 @@ function draw() {
     mazerunner.velocityY=0;
     mazerunner.changeAnimation("l",left)
   }
-
+if(mstate2==="up") {
+  
+    mazerunner.velocityX=0;
+    mazerunner.velocityY=-speed;
+    mazerunner.changeAnimation("u",up)
+  }
+   
+  
   if(mstate2==="right") {
       
     mazerunner.velocityX=speed;
@@ -341,7 +342,7 @@ function draw() {
    }
 
 
-  console.log(life)
+//   console.log(life)
   // mazerunner.collide(wall1)
   // mazerunner.collide(wall2)
   // mazerunner.collide(wall3)
