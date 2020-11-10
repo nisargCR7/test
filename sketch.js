@@ -231,7 +231,7 @@ function draw() {
   
    
   
-   up.touchStarted(()=>{
+   up.mousedown(()=>{
     console.log("up")
     mstate2="up"
     mstate="up"
@@ -241,7 +241,7 @@ function draw() {
 
 
 
-  down.touchStarted(()=>{
+  down.mousedown(()=>{
     console.log("down")
     mstate2="down"
     mstate="down"
@@ -251,7 +251,7 @@ function draw() {
 
   
 
-  right.touchStarted(()=>{
+  right.mousedown(()=>{
     console.log("right")
     mstate="right"
     mstate2="right"
@@ -259,7 +259,7 @@ function draw() {
 
   
 
-  left.touchStarted(()=>{
+  left.mousedown(()=>{
     console.log("left")
     mstate="left"
     mstate2="left"
