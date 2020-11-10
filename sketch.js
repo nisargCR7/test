@@ -231,7 +231,7 @@ function draw() {
   
    
   
-   up.mousePressed(()=>{
+   up.touchStarted(()=>{
     console.log("up")
     mstate2="up"
     mstate="up"
@@ -241,7 +241,7 @@ function draw() {
 
 
 
-  down.mousePressed(()=>{
+  down.touchStarted(()=>{
     console.log("down")
     mstate2="down"
     mstate="down"
@@ -251,7 +251,7 @@ function draw() {
 
   
 
-  right.mousePressed(()=>{
+  right.touchStarted(()=>{
     console.log("right")
     mstate="right"
     mstate2="right"
@@ -259,7 +259,7 @@ function draw() {
 
   
 
-  left.mousePressed(()=>{
+  left.touchStarted(()=>{
     console.log("left")
     mstate="left"
     mstate2="left"
@@ -615,43 +615,43 @@ count=frameCount
 }
 
 
-// function mouseClicked(){
+function mouseClicked(){
 
-// if(mstate==="right"){
-//   mazerunner.velocityX=0
-//   mazerunner.velocityY=0
-//   mazerunner.changeAnimation("right",right_stand)
-//   mstate=0
-//   mstate2=0 
-// }
-
-
-// if(mstate==="left"){
-//   mazerunner.velocityX=0
-//   mazerunner.velocityY=0
-//   mazerunner.changeAnimation("left",left_stand)
-//   mstate=0
-//   mstate2=0 
-// }
+if(mstate==="right"){
+  mazerunner.velocityX=0
+  mazerunner.velocityY=0
+  mazerunner.changeAnimation("right",right_stand)
+  mstate=0
+  mstate2=0 
+}
 
 
-// if(mstate==="up"){
-//  mazerunner.velocityX=0
-//  mazerunner.velocityY=0
-//  mazerunner.changeAnimation("up",up_stand)
-//  mstate=0
-//  mstate2=0 
-// }
+if(mstate==="left"){
+  mazerunner.velocityX=0
+  mazerunner.velocityY=0
+  mazerunner.changeAnimation("left",left_stand)
+  mstate=0
+  mstate2=0 
+}
 
 
-// if(mstate==="down"){
-//  mazerunner.velocityX=0
-//  mazerunner.velocityY=0
-//  mazerunner.changeAnimation("down",down_stand)
-//  mstate=0
-//  mstate2=0 
-// }    
+if(mstate==="up"){
+ mazerunner.velocityX=0
+ mazerunner.velocityY=0
+ mazerunner.changeAnimation("up",up_stand)
+ mstate=0
+ mstate2=0 
+}
+
+
+if(mstate==="down"){
+ mazerunner.velocityX=0
+ mazerunner.velocityY=0
+ mazerunner.changeAnimation("down",down_stand)
+ mstate=0
+ mstate2=0 
+}    
 
 
 
-// }
+}
