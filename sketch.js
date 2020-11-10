@@ -228,7 +228,7 @@ function draw() {
 
 
 
-  if (mstate2==="up") {
+  if(mstate2==="up") {
   
     mazerunner.velocityX=0;
     mazerunner.velocityY=-speed;
