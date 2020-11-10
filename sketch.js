@@ -231,7 +231,7 @@ function draw() {
   
    
   
-   up.mouseClicked(()=>{
+   up.mousePressed(()=>{
     console.log("up")
     mstate2="up"
     mstate="up"
@@ -241,7 +241,7 @@ function draw() {
 
 
 
-  down.mouseClicked(()=>{
+  down.mousePressed(()=>{
     console.log("down")
     mstate2="down"
     mstate="down"
@@ -251,7 +251,7 @@ function draw() {
 
   
 
-  right.mouseClicked(()=>{
+  right.mousePressed(()=>{
     console.log("right")
     mstate="right"
     mstate2="right"
@@ -259,7 +259,7 @@ function draw() {
 
   
 
-  left.mouseClicked(()=>{
+  left.mousePressed(()=>{
     console.log("left")
     mstate="left"
     mstate2="left"
